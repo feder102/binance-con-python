@@ -11,7 +11,7 @@ top_volumenes = []
 list_of_tickers = client.get_all_tickers()
 top_tickers_volume = []
 tickers = client.get_ticker()
-cantidad_monedas = 3
+cantidad_monedas = 5
 
 def get_volumen(tick):
     a = float(tick.get('volume'))
@@ -33,6 +33,7 @@ for tick in top_tickers_volume:
     print(tick['symbol'], end='\n\n')
     print(tick['volume'], end='\n\n')
 print("*****************************************")
+
 # for tick in list_of_tickers:
 #     if (tick['symbol'][-4:] != 'USDT' and tick['symbol'][-4:] != 'BUSD'):
 #         continue
